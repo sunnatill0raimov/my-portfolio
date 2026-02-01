@@ -135,20 +135,22 @@
         .section {
             padding: 120px 0;
         }
-        
+
         /* --- Yangilangan Navbar Stillari --- */
         .nav-link {
             display: inline-block;
             padding: 8px 0;
             font-weight: 500;
-            color: #e2e8f0; /* slate-200 */
+            color: #e2e8f0;
+            /* slate-200 */
             position: relative;
             transition: color 0.3s ease;
             text-decoration: none;
         }
 
         .nav-link:hover {
-            color: #818cf8; /* primary-400 */
+            color: #818cf8;
+            /* primary-400 */
         }
 
         /* Desktop menyu uchun chiziqcha */
@@ -163,33 +165,44 @@
             border-radius: 2px;
             transition: width 0.3s ease;
         }
+
         .hidden.md\:flex .nav-link:hover::after,
         .hidden.md\:flex .active-nav::after {
             width: 100%;
         }
 
         .active-nav {
-            color: #818cf8; /* primary-400 */
+            color: #818cf8;
+            /* primary-400 */
             position: relative;
         }
 
         /* Mobil menyu uchun maxsus stillar */
         #mobile-menu .nav-link {
-            display: block; /* To'liq kenglik */
+            display: block;
+            /* To'liq kenglik */
             padding: 10px 12px;
             border-radius: 6px;
         }
+
         #mobile-menu .nav-link:hover {
-            background-color: #334155; /* slate-700 */
-            color: #e2e8f0; /* slate-200 */
+            background-color: #334155;
+            /* slate-700 */
+            color: #e2e8f0;
+            /* slate-200 */
         }
+
         #mobile-menu .active-nav {
-            background-color: #6366f1; /* primary-500 */
+            background-color: #6366f1;
+            /* primary-500 */
             color: white;
         }
+
         #mobile-menu .nav-link::after {
-            display: none; /* Mobil menyuda chiziqcha kerak emas */
+            display: none;
+            /* Mobil menyuda chiziqcha kerak emas */
         }
+
         /* --- Navbar Stillari Tugadi --- */
 
         .alert {
@@ -223,18 +236,20 @@
                 padding: 80px 0;
             }
         }
-        
+
         /* --- FOYDALANUVCHI QO'SHGAN ANIMATSIYA --- */
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .animate-fadeIn {
             animation: fadeIn 1s ease-out forwards;
             opacity: 0;
@@ -289,7 +304,7 @@
     <section id="home" class="relative min-h-screen flex items-center overflow-hidden">
         <div class="hero-gradient absolute w-full h-full top-0 left-0"></div>
         <!-- Navbar balandligi uchun 'padding-top' qo'shildi -->
-        <div class="container mx-auto px-4 relative z-10 pt-24"> 
+        <div class="container mx-auto px-4 relative z-10 pt-24">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-16 md:mb-0">
                     <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -316,17 +331,33 @@
                 </div>
                 <div class="md:w-1/2 flex justify-center">
                     <div class="relative">
+                        <!-- Background glow effects -->
                         <div
-                            class="absolute w-96 h-96 bg-secondary rounded-full opacity-20 blur-3xl -top-20 left-10 animate-pulse-slow">
+                            class="absolute w-[450px] h-[450px] bg-secondary rounded-full opacity-30 blur-3xl -top-10 left-5 animate-pulse-slow">
                         </div>
-                        <div
-                            class="absolute w-96 h-96 bg-primary rounded-full opacity-20 blur-3xl top-20 -left-10 animate-pulse-slow">
+                        <div class="absolute w-[450px] h-[450px] bg-primary rounded-full opacity-25 blur-3xl top-10 -left-5 animate-pulse-slow"
+                            style="animation-delay: 1s;">
                         </div>
-                        <img src="./public/image/myphoto.png"
-                            alt="Developer"
-                            class="w-80 h-80 object-cover rounded-3xl border-4 border-secondary/20 relative z-10 floating">
-                        <div
-                            class="absolute w-full h-full rounded-3xl border-4 border-primary/10 -bottom-4 -right-4 z-0">
+
+                        <!-- Main image container with enhanced styling -->
+                        <div class="relative">
+                            <img src="./image/myphoto.png" alt="Developer"
+                                class="w-96 h-96 object-cover rounded-3xl shadow-2xl relative z-10 floating" style="
+                                    border: 5px solid;
+                                    border-image: linear-gradient(135deg, #8b5cf6, #ec4899, #6366f1) 1;
+                                    box-shadow: 
+                                        0 25px 50px -12px rgba(139, 92, 246, 0.5),
+                                        0 0 40px rgba(236, 72, 153, 0.3),
+                                        inset 0 2px 4px 0 rgba(255, 255, 255, 0.06);
+                                    filter: brightness(1.05) contrast(1.05);
+                                ">
+                            <!-- Decorative border element -->
+                            <div class="absolute w-full h-full rounded-3xl -bottom-6 -right-6 z-0" style="
+                                    border: 3px solid;
+                                    border-image: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.2)) 1;
+                                    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+                                ">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -349,8 +380,8 @@
                     <div class="relative h-96 w-full overflow-hidden rounded-xl glow-box">
                         <div class="absolute w-full h-full bg-gradient-to-t from-dark to-transparent z-10"></div>
                         <div class="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 z-0"></div>
-                        <img src="./image/my-photo.png"
-                            alt="Mening rasmim" class="w-full h-full object-cover relative transform scale-110"
+                        <img src="./image/my-photo.png" alt="Mening rasmim"
+                            class="w-full h-full object-cover relative transform scale-110"
                             style="mix-blend-mode: lighten;"
                             onerror="this.src=`https://placehold.co/600x400/1e293b/e2e8f0?text=Akbar+Nazarov`">
                     </div>
@@ -445,6 +476,15 @@
                         </div>
                         <div>
                             <div class="flex justify-between mb-1">
+                                <span>Next.js</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-dark rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
                                 <span>CSS</span>
                                 <span>85%</span>
                             </div>
@@ -480,6 +520,24 @@
                             </div>
                             <div class="w-full bg-dark rounded-full h-2">
                                 <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>MongoDB</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-dark rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>PostgreSQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-dark rounded-full h-2">
+                                <div class="bg-secondary h-2 rounded-full" style="width: 80%"></div>
                             </div>
                         </div>
                     </div>
@@ -519,8 +577,8 @@
                 <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[60px]" >
-                <div class="project-card group h-[450px]"  id="land">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[60px]">
+                <div class="project-card group h-[450px]" id="land">
                     <div class="h-64 overflow-hidden rounded-xl">
                         <div class="w-full h-full bg-gradient-to-tr from-secondary/20 to-accent/40 relative">
                             <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80"
@@ -532,11 +590,12 @@
                         <h3 class="text-xl font-bold mb-2">Social Media Dashboard</h3>
                         <p class="text-gray-400 mb-4">Real-time analytics dashboard for social media platforms</p>
                         <div class="flex flex-wrap gap-2">
-                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">React.js</span>
-                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">Express</span>
                             <span
-                                class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">Node.js</span>
-                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">JavaScript</span>
+                                class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">React.js</span>
+                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">Express</span>
+                            <span class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">Node.js</span>
+                            <span
+                                class="bg-secondary/10 text-secondary text-xs px-3 py-1.5 rounded-full">JavaScript</span>
                         </div>
                     </div>
                 </div>
@@ -801,4 +860,3 @@
 </body>
 
 </html>
-
